@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¿Me amas como amigo?</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      background-color: #ffe6f0;
+      margin: 0;
+      padding: 50px;
+    }
+    h1 {
+      color: #d81b60;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #880e4f;
+      font-size: 22px;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+    img {
+      width: 300px;
+      border-radius: 20px;
+      margin-bottom: 30px;
+    }
+    button {
+      margin: 20px;
+      padding: 15px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    #yes {
+      background-color: #66bb6a;
+      color: white;
+    }
+    #no {
+      background-color: #ef5350;
+      color: white;
+      position: absolute;
+    }
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>¿Tú me amas, como amigo?</h1>
+  <h2>Porque yo sí te amo ❤️</h2>
+
+  <!-- Imagen amorosa -->
+  <img src="https://i.imgur.com/YxF5GFs.jpg" alt="Amistad y amor">
+
+  <!-- Botones -->
+  <br>
+  <button id="yes">Sí 💞</button>
+  <button id="no">No 😢</button>
+
+  <!-- Música de fondo -->
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <script>
+    const noButton = document.getElementById('no');
+    noButton.addEventListener('mouseover', () => {
+      const x = Math.random() * (window.innerWidth - 100);
+      const y = Math.random() * (window.innerHeight - 50);
+      noButton.style.left = `${x}px`;
+      noButton.style.top = `${y}px`;
+    });
+
+    document.getElementById('yes').addEventListener('click', () => {
+      alert("¡Gracias por amarme como amigo! 💖");
+    });
+  </script>
+
+</body>
+</html>
